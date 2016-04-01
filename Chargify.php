@@ -305,7 +305,7 @@ class Chargify {
     public function upgradeSubscription($subscriptionId, $data) {
         $data = array(
             'migration' => array(
-                'productId' => $data
+                'product_id' => $data
             )
         );
         
@@ -609,6 +609,7 @@ class Chargify {
             CURLOPT_URL             => 'https://'.$this->domain.'.chargify.com'.$uri,
             CURLOPT_SSL_VERIFYPEER  => false,
             CURLOPT_SSL_VERIFYHOST  => 2,
+            CURLOPT_SSLVERSION		=> 6,
             CURLOPT_FOLLOWLOCATION  => false,
             CURLOPT_MAXREDIRS       => 1,
             CURLOPT_RETURNTRANSFER  => true,
