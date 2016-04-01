@@ -305,7 +305,7 @@ class Chargify {
     public function upgradeSubscription($subscriptionId, $data) {
         $data = array(
             'migration' => array(
-                'productId' => $data
+                'product_id' => $data
             )
         );
         
